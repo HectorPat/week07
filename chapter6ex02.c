@@ -4,8 +4,10 @@ int main(void) {
   float valor;
   printf("ingrese una calificación\n");
   scanf("%f", &valor);
+
   if (valor>=101){
     printf("el valor ingresado es erroneo para a calificar");
+    return 0;
   }
   if (valor<0){
     printf("el valor ingresado es erroneo para calificar");
