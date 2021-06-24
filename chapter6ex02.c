@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 int main(void) {
-  float valor;
+  char line[3];
+  int valor;
   printf("ingrese una calificación\n");
-  scanf("%f", &valor);
+  fgets(line, sizeof(valor), stdin);
+  sscanf(line, "%d", &valor);
 
   if (valor>=101){
     printf("el valor ingresado es erroneo para a calificar");
@@ -13,6 +15,7 @@ int main(void) {
     printf("el valor ingresado es erroneo para calificar");
   return 0;
   }
+  
   if (valor>90){
     printf("tu promedio es A");
   }
