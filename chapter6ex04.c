@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
+  char line[3];
   int importe;
   int quarters=0; /*25 centavos*/ 
   int dimes=0; /*10 centavos*/
@@ -8,16 +9,19 @@ int main(void) {
   int pennies=0; /*1 centavo*/
 
   printf("ingrese valor en centavos (entre 0 y 100)\n");
-  scanf("%d",&importe);
+  fgets(line, sizeof(importe), stdin);
+  sscanf(line, "%d", &importe);
  do{
    printf("esta fuera del parametro, intentelo nuevamente\n");
-   scanf("%d",&importe);
- }while (importe>100);
- 
- do{
+   fgets(line, sizeof(importe), stdin);
+  sscanf(line, "%d", &importe);
+ }while ((importe>100));
+do{
    printf("esta fuera del parametro, intentelo nuevamente\n");
-   scanf("%d",&importe);
- }while (importe<0);
+   fgets(line, sizeof(importe), stdin);
+  sscanf(line, "%d", &importe);
+ }while ((importe<1)); 
+
 
  while(1){
    
