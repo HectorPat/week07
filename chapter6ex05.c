@@ -1,10 +1,13 @@
 #include <stdio.h>
 
 int main(void) {
+  char line[10];
   int año, division, cociente4,cociente100,cociente400;
 
   printf("ingrese un año\n");
-  scanf("%d", &año);  
+  fgets(line, sizeof(año), stdin);
+  sscanf(line, "%d", &año);
+  
   cociente4=(año%4);
   cociente100=(año%100);
   cociente400=(año%400);
