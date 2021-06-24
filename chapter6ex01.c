@@ -32,6 +32,5 @@ float Ar2;
   Dist=sqrt((Ar1+Ar2));
   
   printf("tu distancia es %f unidades",Dist);
-  printf("tu distancia es %.2d unidades",Px);
   return 0;
 }
