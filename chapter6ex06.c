@@ -1,12 +1,16 @@
 #include <stdio.h>
 
 int main(void) {
-  float horas,salario,sueldof;
+  char line [5];
+  int horas;
+  int salario;
+  float sueldof;
   float sueldo=0;
   float sueldoex=0;
   float extra=0;
   printf("ingrese las horas trabajadas a la semana\n");
-  scanf("%f",&horas);
+  fgets(line, sizeof(horas), stdin);
+  sscanf(line, "%d", &horas);
   
 if(horas>168){
   printf("es imposible hacer esas horas ya que 7 dias 168 horas");
@@ -14,7 +18,8 @@ if(horas>168){
   }
 
   printf("ingrese el salario por hora\n");
-  scanf("%f",&salario);
+  fgets(line, sizeof(salario), stdin);
+  sscanf(line, "%d", &salario);
 
   if(horas<=40){
     sueldo=(horas)*(salario);
